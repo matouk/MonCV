@@ -28,6 +28,10 @@ Expert avec **+15 ans d'expérience** dans l'architecture, l'administration, la 
 |  ORCHESTRATION & K8S   : Kubernetes, Helm, Kustomize, ArgoCD, FluxCD                  |
 |  INFRA & AUTOMATION    : Terraform, OpenTofu, Ansible, GitLab CI/CD, GitHub Actions   |
 |  SECURITE & GOUVERNANCE: Apache Ranger KMS, Kerberos, SSSD, Key Trustee Server        |
-|  LLMOps & MLOps        : vLLM, Langfuse, ChromaDB/Qdrant/Milvus, RAG Architecture      |
+|  LLMOps & MLOps        : vLLM, Langfuse, ChromaDB/Qdrant/Milvus, RAG Architecture    |
 |  CLOUD & NETWORK       : Azure (ExpressRoute, AKS, Storage), Hybrid Architectures     |
 +---------------------------------------------------------------------------------------+
+
+$ echo "Au plaisir d'échanger sur vos défis d'architecture Big Data, IA & GitOps !"
+
+
