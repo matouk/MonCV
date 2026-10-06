@@ -1,0 +1,236 @@
+```html
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Vitrine - Architecte Solution Big Data, IA & GitOps</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- React / ReactDOM / Babel CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .glow-effect {
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const App = () => {
+            const [activeTab, setActiveTab] = useState('all');
+            const [copied, setCopied] = useState(false);
+
+            useEffect(() => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                }
+            }, [activeTab]);
+
+            const skills = [
+                { category: 'ia', name: 'LLM & RAG', level: 'Avancé', desc: 'vLLM, Milvus/Qdrant, LangChain, Mistral AI, Fine-tuning' },
+                { category: 'bigdata', name: 'Big Data Processing', level: 'Expert', desc: 'Apache Spark, Flink, Kafka, Delta Lake, Apache Iceberg' },
+                { category: 'devops', name: 'GitOps & Orchestration', level: 'Expert', desc: 'ArgoCD, Kubernetes, Helm, Kustomize, FluxCD' },
+                { category: 'devops', name: 'Infrastructure as Code', level: 'Avancé', desc: 'Terraform, CloudFormation, Ansible, Security Scan (Trivy)' },
+                { category: 'cloud', name: 'Cloud Architecture', level: 'Expert', desc: 'AWS, GCP, Azure, Multi-cloud & Hybrid setups' }
+            ];
+
+            const projects = [
+                {
+                    title: "Plateforme RAG Enterprise & Delta Lake",
+                    tag: "Big Data & IA",
+                    gitops: "Deployé via ArgoCD + Helm",
+                    desc: "Architecture temps réel ingérant des millions d'événements Kafka vers Delta Lake avec un pipeline RAG haute performance pour requête sémantique.",
+                    techs: ["Apache Spark", "Kafka", "Qdrant", "vLLM", "Kubernetes", "ArgoCD"]
+                },
+                {
+                    title: "Infrastructure-as-Code & GitOps Pipeline",
+                    tag: "DevOps & GitOps",
+                    gitops: "GitHub Actions + Terraform",
+                    desc: "Squelette complet de provisionnement EKS/GKE automatisé avec règles OOPA/Gatekeeper, Trivy scanning et déploiement continu déclaratif.",
+                    techs: ["Terraform", "GitHub Actions", "ArgoCD", "Kubernetes", "Helm"]
+                }
+            ];
+
+            const filteredSkills = activeTab === 'all' 
+                ? skills 
+                : skills.filter(s => s.category === activeTab);
+
+            return (
+                <div class="min-h-screen flex flex-col">
+                    {/* Header Nav */}
+                    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+                        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                            <div class="flex items-center space-x-2">
+                                <span class="p-2 bg-sky-500/10 rounded-lg border border-sky-500/20 text-sky-400 font-mono font-bold">&lt;SA/&gt;</span>
+                                <span class="font-bold text-lg tracking-wide">Architecte Portfolio</span>
+                            </div>
+                            <nav class="hidden md:flex space-x-6 text-sm text-slate-400">
+                                <a href="#about" class="hover:text-sky-400 transition">À propos</a>
+                                <a href="#skills" class="hover:text-sky-400 transition">Compétences</a>
+                                <a href="#projects" class="hover:text-sky-400 transition">Projets GitOps</a>
+                                <a href="#architecture" class="hover:text-sky-400 transition">Architecture</a>
+                            </nav>
+                            <a href="https://github.com" target="_blank" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-sm font-medium transition flex items-center gap-2">
+                                <i data-lucide="github" class="w-4 h-4"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </header>
+
+                    {/* Hero Section */}
+                    <section id="about" class="relative py-20 px-4 overflow-hidden border-b border-slate-800/60">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none glow-effect"></div>
+                        <div class="max-w-4xl mx-auto text-center space-y-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-mono">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                Disponible pour Projets & Architecture Senior
+                            </div>
+                            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                                Architecte Solution <br/>
+                                <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">
+                                    Big Data, IA & GitOps
+                                </span>
+                            </h1>
+                            <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                                Conception et industrialisation de plateformes Data & ML distribuées, automatisées de bout en bout grâce aux approches Cloud Native et GitOps.
+                            </p>
+
+                            <div class="pt-4 flex flex-wrap justify-center gap-4 text-sm font-mono text-slate-300">
+                                <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-md flex items-center gap-2">
+                                    <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i> Distributed Systems
+                                </span>
+                                <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-md flex items-center gap-2">
+                                    <i data-lucide="git-branch" class="w-4 h-4 text-emerald-400"></i> GitOps & ArgoCD
+                                </span>
+                                <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-md flex items-center gap-2">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i> LLMOps & RAG
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Interactive Skills Section */}
+                    <section id="skills" class="py-16 px-4 max-w-6xl mx-auto w-full">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                            <div>
+                                <h2 class="text-2xl font-bold flex items-center gap-2">
+                                    <i data-lucide="layers" class="text-sky-400"></i> Matrice de Compétences
+                                </h2>
+                                <p class="text-slate-400 text-sm">Sélectionne un domaine pour filtrer l'expertise technique.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                {['all', 'bigdata', 'ia', 'devops', 'cloud'].map(tab => (
+                                    <button
+                                        key={tab}
+                                        onClick={() => setActiveTab(tab)}
+                                        class={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition ${
+                                            activeTab === tab 
+                                            ? 'bg-sky-500 text-white font-bold' 
+                                            : 'bg-slate-900 text-slate-400 border border-slate-800 hover:border-slate-700'
+                                        }`}
+                                    >
+                                        {tab}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {filteredSkills.map((s, idx) => (
+                                <div key={idx} class="p-5 bg-slate-900/60 border border-slate-800/80 hover:border-sky-500/50 rounded-xl transition group">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-bold text-slate-200 group-hover:text-sky-400 transition">{s.name}</h3>
+                                        <span class="text-xs px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-mono">
+                                            {s.level}
+                                        </span>
+                                    </div>
+                                    <p class="text-sm text-slate-400 leading-relaxed">{s.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Projects Section */}
+                    <section id="projects" class="py-16 px-4 bg-slate-900/30 border-y border-slate-800/60">
+                        <div class="max-w-6xl mx-auto">
+                            <h2 class="text-2xl font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="folder-git-2" class="text-emerald-400"></i> Projets Vitrines & Modèles GitOps
+                            </h2>
+                            <p class="text-slate-400 text-sm mb-8">Architectures prêtes à l'emploi et déclaratives.</p>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                {projects.map((p, idx) => (
+                                    <div key={idx} class="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-4 flex flex-col justify-between">
+                                        <div>
+                                            <div class="flex justify-between items-center mb-3">
+                                                <span class="text-xs font-mono px-2 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded">
+                                                    {p.tag}
+                                                </span>
+                                                <span class="text-xs text-slate-500 font-mono flex items-center gap-1">
+                                                    <i data-lucide="check-circle-2" class="w-3 h-3 text-emerald-400"></i> {p.gitops}
+                                                </span>
+                                            </div>
+                                            <h3 class="text-lg font-bold text-slate-100">{p.title}</h3>
+                                            <p class="text-slate-400 text-sm mt-2 leading-relaxed">{p.desc}</p>
+                                        </div>
+                                        <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+                                            {p.techs.map((t, i) => (
+                                                <span key={i} class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-1 rounded">
+                                                    {t}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Footer */}
+                    <footer class="mt-auto py-8 border-t border-slate-800 text-center text-xs text-slate-500 font-mono">
+                        <p>Généré & Déployé via GitHub Actions & Agent Mistral AI — Single Page Architecture</p>
+                    </footer>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
+```
