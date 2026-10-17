@@ -13,24 +13,24 @@
 
 ### 👨‍💻 À propos
 
-Expert avec **+15 ans d'expérience** dans l'architecture, l'administration, la sécurisation et l'automatisation des **plateformes Big Data & IA à échelle industrielle**. Spécialisé dans le déploiement multi-tenant, la gouvernance de données, le serving de LLMs (vLLM/RAG) et la mise en œuvre de méthodologies industrielles **DevOps & GitOps**.
+Expert avec **+15 ans d'expérience** dans l'architecture, l'administration, la sécurisation et l'automatisation des **plateformes Big Data & IA à échelle industrielle**. Référent de sécurité sur ces plateformes et spécialisé dans le déploiement multi-tenant, la gouvernance de données, le déploiement et le serving de modèles LLMs Mistral (vLLM/RAG) sur de cloud souverain avec la mise en œuvre de méthodologies industrielles **DevOps & GitOps**.
 
-> *"Transformer la complexité des infrastructures Data & IA en plateformes hautement disponibles, sécurisées et automatisées."*
+> *"Transformer la complexité des infrastructures Data & IA lateformes hautement disponibles, sécurisées et automatisées."*
 
 ---
 
 ### 🛠️ Stack Technique & Compétences Clés
 
-* **PLATFORMES DATA & IA :** Dataiku DSS (Automation, Deployer, API Nodes), Cloudera CDP
-* **ORCHESTRATION & K8S :** Kubernetes, Helm, Kustomize, ArgoCD, FluxCD
-* **INFRA & AUTOMATION :** Terraform, OpenTofu, Ansible, GitLab CI/CD, GitHub Actions
-* **SECURITE & GOUVERNANCE :** Apache Ranger KMS, Kerberos, SSSD, Key Trustee Server
-* **LLMOps & MLOps :** vLLM, Langfuse, ChromaDB, Qdrant, Milvus, RAG Architecture
-* **CLOUD & NETWORK :** Azure (ExpressRoute, AKS, Storage), Hybrid Architectures
+* **PLATFORMES DATA & IA :** Dataiku sur Cloud Souverain (OutScale pour  GPU et K8S on-premise pour les CPU), MapR, Cloudera (CDP / HDP)
+* **ORCHESTRATION & K8S :** Kubernetes, Rancher, ArgoCD, Gitlab CI/CD.
+* **INFRA & AUTOMATION :** Terraform( OpenTofu), Ansible, GitLab CI/CD, GitHub Actions
+* **SECURITE & GOUVERNANCE :** Ranger KMS, Kerberos, SSSD, Active Directory, Key Trustee Server
+* **LLMOps & MLOps :** vLLM, Mistral, Dataiku, ChromaDB, PgVector, Milvus, RAG Architecture, 
+* **CLOUD & NETWORK :** Microsoft Azure (ExpressRoute, AKS, Storage), Hybrid Architectures, Databricks
 
 ---
 
-### 🏛️ Projets Vitrines / Portfolio GitOps
+### 🏛️ Projets Vitrines / Portifolio GitOps
 
 #### 1. 🤖 Enterprise LLM & RAG Infrastructure Engine
 * **Mots-clés :** vLLM | Langfuse | Qdrant | ArgoCD | Kubernetes | Terraform
