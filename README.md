@@ -125,14 +125,15 @@ Expert avec **+15 ans d'expérience** dans l'architecture, l'administration, la 
 
 ## 🏛️ Projets Vitrines / Portfolio GitOps
 
-* **Enterprise LLM & RAG Infrastructure Engine :** Plateforme d'inférence sécurisée (vLLM, Vector DB Qdrant/ChromaDB, Langfuse) orchestrée via Kubernetes et ArgoCD.
-* **Sécurisation Cloudera CDP & Governance :** Hardening multi-tenant avec chiffrement HDFS KMS, politiques Apache Ranger et Kerberos.
-* **Architecture Multi-Node Dataiku DSS :** Intégration hybride d'un environnement Dataiku connecté à Azure (ExpressRoute) avec exécution distante de jobs sur Kubernetes.
+* **Enterprise LLM & RAG Infrastructure Engine avec Mistral :** Plateforme d'inférence sécurisée pour une IA generative souveraine et RAG d'entreprise sur mesure ( modeles LLMs et Embedding locaux, Agent IA, integration avec la plateforme Data Cloudera).
+
+* **Architecture Multi-Node Dataiku DSS :** Intégration hybride d'un environnement Dataiku connecté au cloud souverain OutScale ( NumSpot) via (Direct Link) avec éxecution à distante de jobs sur Kubernetes (GPU/CPU).
 
 ---
 
 ## 🎓 Formation
 
-* **Master 2 Pro Informatique** *(2012 – 2013)*
-* **IUT Blois** – Informatique & Réseaux
-
+* **Master 2 Pro Informatique: les entrepos de données et la BI** *(2012 – 2013)* |*IUT Blois*
+* **Magister post graduation : These les Architectures Orentées Services (SOA)** *(2009 - 2011)* | *ESI*: École Supérieure d'Informatique (Alger)
+* **Ingénieur Informatique: SIAD Système e'Information et Aide à la Decision)** *(2003 - 2008)* | *Université de Béjaïa*
+  
